@@ -5,12 +5,9 @@ import os
 import logging
 
 from crawl.categorycrawl import CategoryCrawl  # pylint: disable
-from crawl.productcrawl import ProductCrawl
 from common.database.dbmanager import DatabaseManager
 from common.config.configmanager import ConfigManager
-from common.driver.seleniumdriver import Selenium
 from common.log import make_logger
-import pickle
 
 def main():
     logger = make_logger()
