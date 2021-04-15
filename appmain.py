@@ -24,7 +24,8 @@ def main():
 
     # pickle.dumps(DatabaseManager())
     # 카테고리 파싱 주석
-    CategoryCrawl().run()
+    # CategoryCrawl().run()
+    CategoryCrawl().parse()
 
     # ProductCrawl()
 
