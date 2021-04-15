@@ -3,13 +3,22 @@ use module
 import os
 """
 import logging
-
+from fastapi import FastAPI
 from crawl.categorycrawl import CategoryCrawl  # pylint: disable
 from common.database.dbmanager import DatabaseManager
 from common.config.configmanager import ConfigManager
 from common.log import make_logger
 
+app = FastAPI()
+
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
+
 def main():
+
     logger = make_logger()
 
     logger.info('Crawl Test')
